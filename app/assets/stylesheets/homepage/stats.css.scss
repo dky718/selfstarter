@@ -1,8 +1,13 @@
 #backing
 {
   float: left;
-  width: 383px;
+  width: 370px;
   margin: 20px 0 0 40px;
+  font-size: 25px;
+  .note {
+    font-size: 20px;
+    margin: 10px;
+  }
   #backers
   {
     border-left: none;

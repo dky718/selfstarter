@@ -1,67 +1,38 @@
 <div class="gray_background" id="faqs">
   <div class="wrapper clearfix">
-    <h4>Frequently Asked Questions</h4>
+    <h4>FAQ &amp; Additional Information</h4>
     <ul>
-      <li class=''>
-        <details class=''>
-          <summary class=''>How do I setup Amazon Payments?</summary>
-          <p>You'll need to <a href="https://payments.amazon.com/sdui/sdui/accountstatus">create an Amazon Seller Central account</a>. Afterwards, get your access key and secret key from the "Integration" tab on your AWS account. <a href="https://payments.amazon.com/sdui/sdui/helpTab/Checkout-by-Amazon/Advanced-Integration-Help/Using-Your-Access-Key">Click here for more info</a>.
-          <br />
-          <br />
-          Once you have your access key and secret key, head over to <code>config/settings.yml</code>. Change <code>amazon_access_key</code> and <code>amazon_secret_key</code> appropriately.</p>
+      <li>
+        <details>
+          <summary>What kind of t-shirts are you printing on?</summary>
+             <p>We are printing on high-quality t-shirts of comparable quality to American Apparel. We hope that you will show your support for Queens by wearing the t-shirts all the time!</p>
         </details>
       </li>
       <li>
-        <details class=''>
-          <summary>Can I use another payments provider?</summary>
-          <p>Of course. We haven't built in support for other providers, but we recommend that you take a look at <a href="https://stripe.com">Stripe</a> or <a href="https://wepay.com">WePay</a>.</p>
+        <details>
+          <summary>When will I receive my t-shirt?</summary>
+          <p>We have a team of volunteers working to get your t-shirts to you as soon as possible. We are planning on shipping them in 2-3 weeks.</p>
         </details>
       </li>
       <li>
-        <details class=''>
-          <summary>How do I edit the FAQ?</summary>
-          <p>The faq is a partial located in <code>app/views/preorder/homepage/_faq.html.erb</code> The <code>summary</code> tag is the title, the <code>p</code> is the body. Make sure to add an <code>li</code> tag for each FAQ entry.</p>
-        </details>
-      </li>
-      <li>
-        <details class=''>
-          <summary>How do I change around the images, product name, etc?</summary>
-          <p>The best way is in <code>config/settings.yml</code>. It has variables for several different parts, the video, the product name, the call to action button ("Fork Now"), and several more.
-          </p>
+        <details>
+          <summary>Who is responsible for Rebuilding Queens?</summary>
+          <p>Rebuilding Queens is an initiative by the <a href="http://www.queensbp.org/">Queens Borough President's Office</a> in partnership with <a href="http://www.queenstech.org/">Coalition for Queens</a>, a nonprofit organization that is fostering tech in the borough.</p>
         </details>
       </li>
     </ul>
     <ul class='col2'>
       <li>
-        <details class=''>
-          <summary>How do I change the CSS?</summary>
-          <p>Head over to <code>app/assets/stylesheets/variables.css.scss</code>. It makes it easy to change around the elements used throughout the HTML.
-          <br />
-          <br />
-          Alternatively, you can dive right into the CSS, have a look at <code>app/assets/stylesheets/main.css.scss</code>.</p>
-        </details>
-      </li>
-      <li class=''>
-        <details class=''>
-          <summary>Why did you release this?</summary>
-          <p>Hardware startups are less welcome on Kickstarter than they were 6 months ago. We needed to roll our own kickstarter, so we did. Other hardware startups probably will too, so we made it easier for them by open sourcing our way of doing it.</p>
-        </details>
-      </li>
-      <li class=''>
-        <details class=''>
-          <summary class=''>What software stack does this use?</summary>
-          <p>It's a Ruby on Rails app that makes heavy use of SCSS, Kickstarter's wonderful <code>amazon_flex_pay</code> gem, and a hint of CoffeeScript.</p>
-        </details>
-      </li>
-      <li class=''>
-        <details class=''>
-          <summary class=''>How do I deploy it?</summary>
-          <p>We recommend using Heroku. We include a Procfile for you, so all you need to do is:
-          <p>
-            <p>Install the <a href="https://toolbelt.heroku.com/">Heroku Toolbelt</a></p>
-            <p>Run <code>heroku create</code> in Selfstarter's folder</code></p>
-            <p>Run <code>git push heroku master</code> in Selfstarter's folder</p>
+        <details>
+          <summary>Where will the proceeds go?</summary>
+           <p>All proceeds from the Rebuilding Queens campaign will be donated directly towards relief efforts in the borough. We are identifying organizations and groups that are in immediate need and will make the most impact. If you know any organizations that would like to partner with us or are in need of funds, please contact us at <a href="mailto:team@coalitionforqueens.org">team@coalitionforqueens.org</a>.
           </p>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>How can I help?</summary>
+          <p>There are many ways to get involved. Please support our mission by purchasing a t-shirt or donate to the initiative. If you are looking to volunteer, visit <a href="http://www.nycservice.org/">NYC Service</a> for volunteer opportunities. For any further questions, contact us at <a href="mailto:team@coalitionforqueens.org"> team@coalitionforqueens.org</a>.</p>
         </details>
       </li>
     </ul>

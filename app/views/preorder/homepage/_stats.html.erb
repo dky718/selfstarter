@@ -1,53 +1,15 @@
 <div class="wrapper clearfix">
-  <div id="video">
+  <!-- <div id="video">
     <iframe width='512' height='385' src="<%= video_url %>"></iframe>
+  </div> -->
+  <div id="video">
+    <img src="<%= image_path('tshirtmockup.jpg') %>" width="512" height="575">
   </div>
-
   <div id="backing">
-    <ul>
-      <li class="stats" id="backers">
-        <%= number_with_delimiter Order.current, :delimiter => "," %>
-        <span><%= Settings.primary_stat %></span>
-      </li>
-      <li class="stats">
-        <%= number_to_currency Order.revenue, :precision => 0 %>
-        <span>of <%= number_to_currency Settings.project_goal.to_f * Settings.price.to_f, :precision => 0 %></span>
-      </li>
+    <p>Support the communities in Queens affected by Hurricane Sandy by purchasing a T-shirt or donating to Rebuilding Queens</p>
+    <p class="note">Please allow 2-3 weeks for delivery</p>
 
-      <% if Settings.expiration_date.present? %>
-        <li class="stats" id="days">
-          <%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\D/, "") %>
-          <span><%= distance_of_time_in_words_to_now(Settings.expiration_date).gsub(/\d/, "").gsub("about", "") %> left</span>
-        </li>
-      <% else %>
-        <li class="stats" id="days">
-            &infin;
-            <span>days left</span>
-          </li>
-      <% end %>
-    </ul>
-    
-    <% if Order.current < Order.goal %>
-      <div id='progress_bg' class='small'>
-        <div id='progress' class='' style='width: <%= Order.percent %>%;'>
-        </div>
-      </div>
-    <% else %>
-      <div id="progress_bg">
-        <div id="progress">
-        </div>
-        <div id='progress_text'><%= Order.percent %>% <%= Settings.progress_text %></div>
-      </div>
-    <% end %>
-    
-    <div id="reserve_container">
-      <p id="ship_date"><%= Settings.ships %></p>
-      <a href="/preorder/checkout" class="blue_button reserve"><%= Settings.call_to_action %></a>
-      <p id="price"><%= Settings.price_human %></p>
-      <p><%= Settings.dont_give_them_a_reason_to_say_no %></p>
-      <%= like_button %>
-    </div>
-    
+    <a class="wepay-widget-button wepay-green" id="wepay_widget_anchor_50cf79083eafd" href="https://www.wepay.com/stores/353767/item/946323">Add to cart</a><script type="text/javascript">var WePay = WePay || {};WePay.load_widgets = WePay.load_widgets || function() { };WePay.widgets = WePay.widgets || [];WePay.widgets.push( {object_id: 946323,widget_type: "store_item_add_to_cart",anchor_id: "wepay_widget_anchor_50cf79083eafd",widget_options: {store_id: 353767,show_item_price: true,show_item_images: true,button_text_sold_out: "Sold Out",show_item_custom_options: true,button_text: "Add to cart"}});if (!WePay.script) {WePay.script = document.createElement('script');WePay.script.type = 'text/javascript';WePay.script.async = true;WePay.script.src = 'https://static.wepay.com/min/js/widgets.v2.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(WePay.script, s);} else if (WePay.load_widgets) {WePay.load_widgets();}</script>
+
   </div>
-  
 </div>
