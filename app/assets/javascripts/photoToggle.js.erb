@@ -1,0 +1,26 @@
+$(function() {
+  var imageUrls = [];
+  imageUrls.push("<%= image_path("tshirt-close-up.jpg") %>");
+  imageUrls.push("<%= image_path("tshirtmockup.jpg") %>");
+  imageUrls.push("<%= image_path("tshirt-design.jpg") %>");
+
+  var togglePhoto = function(element, interval) {
+    var i = 1;
+    var internal = function() {
+      i = (i + 1) % imageUrls.length;
+      element.animate({
+        opacity: 0,
+      }, 1000, function() {
+        i = (i + 1) % imageUrls.length;
+        element.attr('src', imageUrls[i]);
+        element.animate({
+        opacity: 1
+        }, 1000, function() {});
+      });
+    };
+    setInterval(internal, interval);
+  };
+
+  togglePhoto($('#video img'), 4000);
+});
+
